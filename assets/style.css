@@ -1,0 +1,42 @@
+body {
+    margin: 12px;
+}
+
+header {
+text-align: center;
+display: inline-block;
+background-image: linear-gradient(to bottom right, rgb(171, 136, 236), rgb(14, 18, 243));
+width: 100%;
+font-size: 80px;
+}
+
+.hr1 {
+    border: 7px solid rgb(91, 15, 161);
+    margin-top: 3px;
+}
+
+.col-3 {
+    border: rgb(0, 0, 0);
+    height: 800px;
+    background-color: rgb(186, 236, 238);    
+}
+
+#search-button {
+ background-color: cornflowerblue;
+ color: black;
+
+}
+
+.col-9 {
+    border: rgb(0, 0, 0);
+    border-width: 1px;
+    height: 800px;
+}
+
+.card {
+    width: 20%;
+}
+
+#desc {
+    text-transform: uppercase;
+}
