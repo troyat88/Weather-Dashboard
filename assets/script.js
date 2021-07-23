@@ -8,7 +8,24 @@
 7. ADD IMAGE links
 */
 var key = "a43949445aa97c6dc3150855a2e5fd13"
-const dateT = new Date ()
+//const dateT = new Date(dd/mm/yyyy)
+//console.log(dateT)
+
+function setDate(){
+    var weatherDay = moment().format('(MM/D/YYYY)')
+    $("#today-date").text(weatherDay);
+    var oneDay = moment().add(01, 'days').format('MM/D/YYYY')
+    $("#forecast-date").text(oneDay);
+    var twoDay = moment().add(02, 'days').format('MM/D/YYYY')
+    $("#forecast-date2").text(twoDay);
+    var threeDay = moment().add(03, 'days').format('MM/D/YYYY')
+    $("#forecast-date3").text(threeDay);
+    var fourDay = moment().add(04, 'days').format('MM/D/YYYY')
+    $("#forecast-date4").text(fourDay);
+    var fiveDay = moment().add(05, 'days').format('MM/D/YYYY')
+    $("#forecast-date5").text(fiveDay);
+    }
+    setDate()
 
 
 
@@ -58,6 +75,12 @@ function weatherSearch(searchCity){
             var uvi = data1.current.uvi
             console.log(uvi)
             $("#uv").text("UV INDEX: " + uvi)
+                if(uvi < 5) {
+                    $("#uv").addClass("favorable")
+                 }else if (uvi > 8) {
+                    $("#uv").addClass("severe")
+                 }else $("#uv").addClass("moderate")
+                 
             console.log(data1.daily.length -3)
             //for (var i = 0; i < data1.daily.length -3; i++){
                 var iconF = data1.daily[0].weather[0].icon
@@ -103,22 +126,7 @@ function weatherSearch(searchCity){
                 $("#forecast-humidity4").text( "Humididty " + humF4 + "%")
                 var humF5 = data1.daily[4].humidity
                 $("#forecast-humidity5").text( "Humididty " + humF5 + "%")
-                
-
-                
-                
-                
-
-
-
-
-                
-
-
-        
-
-            
-            
+              
          })
 
         })

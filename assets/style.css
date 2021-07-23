@@ -10,6 +10,10 @@ width: 100%;
 font-size: 80px;
 }
 
+#jumbo {
+    background-color: rgb(186, 236, 238);
+}
+
 .hr1 {
     border: 7px solid rgb(91, 15, 161);
     margin-top: 3px;
@@ -17,8 +21,8 @@ font-size: 80px;
 
 .col-3 {
     border: rgb(0, 0, 0);
-    height: 800px;
-    background-color: rgb(186, 236, 238);    
+    height: 905px;
+    //background-color: rgb(186, 236, 238);    
 }
 
 #search-button {
@@ -27,10 +31,20 @@ font-size: 80px;
 
 }
 
+#search-button:hover {
+    transform: scale(1.2);
+}
+
 .col-9 {
     border: rgb(0, 0, 0);
     border-width: 1px;
     height: 800px;
+}
+
+.card-group {
+    margin-left: 15px;
+    margin-right: 12px;
+
 }
 
 .card {
@@ -39,4 +53,19 @@ font-size: 80px;
 
 #desc {
     text-transform: uppercase;
+}
+
+.favorable {
+    background-color: rgb(14, 190, 43);
+    width:fit-content;
+}
+
+.moderate {
+    background-color: yellow;
+    width:fit-content;
+}
+
+.severe {
+    background-color: tomato;
+    width: fit-content;
 }
