@@ -22,7 +22,7 @@ font-size: 80px;
 .col-3 {
     border: rgb(0, 0, 0);
     height: 905px;
-    //background-color: rgb(186, 236, 238);    
+       
 }
 
 #search-button {
@@ -35,6 +35,12 @@ font-size: 80px;
     transform: scale(1.2);
 }
 
+#history-button {
+width: 200px;
+text-align: center;
+margin-left: 15px;
+}
+
 .col-9 {
     border: rgb(0, 0, 0);
     border-width: 1px;
@@ -44,6 +50,7 @@ font-size: 80px;
 .card-group {
     margin-left: 15px;
     margin-right: 12px;
+    
 
 }
 
@@ -56,7 +63,7 @@ font-size: 80px;
 }
 
 .favorable {
-    background-color: rgb(14, 190, 43);
+    background-color: #9ac94f;
     width:fit-content;
 }
 
