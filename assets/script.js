@@ -12,7 +12,8 @@
 
 var key = "a43949445aa97c6dc3150855a2e5fd13"
 
-// ADD DATE AND TIME TO JUMBOTRON AND 5-DAY 
+
+// ADD DATE AND TIME TO JUMBOTRON AND 5-DAY CARDS
 function setDate(){
     var weatherDay = moment().format('(MM/D/YYYY)')
     $("#today-date").text(weatherDay);
@@ -31,7 +32,7 @@ function setDate(){
 
 
 // CAPTURE CLICK ON SEARCH BUTTON    
-$("#search-button").click(searchEventHandler)
+$("#search-button").click(searchEventHandler) 
 function searchEventHandler(){
 console.log("click")
     let searchCity = $("#search-city").val().trim();
@@ -44,7 +45,9 @@ console.log("click")
         setDate()
         
 
-}
+    }      
+
+
 
 //get current weather for city/ display in Hero
 function weatherSearch(searchCity){
