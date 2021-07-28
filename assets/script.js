@@ -31,7 +31,7 @@ function setDate(){
 
 
 // CAPTURE CLICK ON SEARCH BUTTON    
-$("#search-button").click(searchEventHandler)
+$("#search-button").click(storeHistory)
 function searchEventHandler(){
 console.log("click")
     let searchCity = $("#search-city").val().trim();
@@ -44,6 +44,29 @@ console.log("click")
         setDate()
         
 
+}
+var historyArray = []
+function loadHistory(){
+    var currentHistory = localStorage.getItem("prevSearch")
+/*for (i=0; i<currentHistory.length ; i++){
+    historyArray.push(currentHistory[i])
+}*/
+console.log(currentHistory)
+}
+loadHistory()
+
+
+function storeHistory(){
+    
+    let searchCity = $("#search-city").val().trim();
+  
+        if(!searchCity){
+            alert("please enter a city name.");
+        }
+        historyArray.push(searchCity)
+        localStorage.setItem("prevSearch", historyArray)
+        weatherSearch(searchCity);
+        setDate()
 }
 
 //get current weather for city/ display in Hero
@@ -141,14 +164,17 @@ function weatherSearch(searchCity){
     }
 // DISPLAY SAVED SEARCH   
 function displayHistory() {
-var savedCity = localStorage.getItem("prevSearch");
-var historyButton = document.createElement('button');
-$(historyButton).text(savedCity);
-$(historyButton).addClass("btn btn-primary btn-lg btn-block");
-$(historyButton).attr("id", "history-button")
-$("#history-container").append(historyButton)
+for( i=0; i < historyArray.length; i++){
+    var savedCity = localStorage.getItem("prevSearch"[i]);
+    var historyButton = document.createElement('button');
+    $(historyButton).text(savedCity);
+    $(historyButton).addClass("btn btn-primary btn-lg btn-block");
+    $(historyButton).attr("id", "history-button")
+    $("#history-container").append(historyButton)
+}
 }
 displayHistory()
+console.log(historyArray)
 
 //RENDER FORECAST AND CONDITIONS WHEN SAVED SEARCH IS CLICKED
 $("#history-button").click(displayHistoryButton);
