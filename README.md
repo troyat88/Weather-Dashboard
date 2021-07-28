@@ -1,5 +1,10 @@
 # Weather-Dashboard
 
+![Final Product Image](assets/images/Weather-Screenshot.png)
+Deployed Application: https://troyat88.github.io/Weather-Dashboard/    
+Code repository: https://github.com/troyat88/Weather-Dashboard
+---
+---
 ## Objective
 Intergrate OpenWeather API and custom webpage to create a weather-dashboard where users can search for weather condtions by location as well as by selecting previous searches
 ---
