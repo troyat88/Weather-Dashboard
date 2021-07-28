@@ -1,14 +1,4 @@
-/* to do:
-1. capture event on Submit button DONE
-2. fetch API for current weather by day  DONE
-3. capture lat and lon from current weather return  DONE
-4. Display to Current day container DONE
-5. use lat and long from current to build API fetch for 5-day DONE
-6. Display to 5 day container DONE
-7. ADD IMAGE links DONE
-8. Added color code DONE
-9. comit and display search history**** only one city being commited, not sure how to loop saved search into original function...
-*/
+
 
 var key = "a43949445aa97c6dc3150855a2e5fd13"
 
@@ -49,7 +39,7 @@ console.log("click")
 
 
 
-//get current weather for city/ display in Hero
+//FETCH CURENT WEATHER AND DISPLAY
 function weatherSearch(searchCity){
     console.log(searchCity)
     var apiToday = "https://api.openweathermap.org/data/2.5/weather?q="+searchCity+"&units=imperial&appid="+key;
